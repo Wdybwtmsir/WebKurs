@@ -1,0 +1,106 @@
+.services {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  color: #000;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.serviceCard {
+  background-color: #fff;
+  padding: 40px 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.iconWrapper {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; 
+}
+
+.serviceIcon {
+  width: auto;
+  height: 180px; 
+  object-fit: contain;
+}
+
+.serviceTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.serviceDescription {
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.readMore {
+  color: #23a6f0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.readMore:hover {
+  color: #1a7fc9;
+}
+
+@media (max-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .sectionTitle {
+    font-size: 36px;
+  }
+  
+  .serviceTitle {
+    font-size: 24px;
+  }
+  
+  .serviceIcon {
+    height: 60px;
+  }
+}

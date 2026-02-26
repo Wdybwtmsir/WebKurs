@@ -1,0 +1,123 @@
+.header {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logoImage {
+  height: 50px;
+  width: auto;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.phoneIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.contact span {
+  color: #666;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.3s;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.nav a:hover {
+  color: #23a6f0;
+}
+
+.dropdown {
+  position: relative;
+}
+
+/* Социальные сети */
+.social {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+.socialIcon:hover {
+  opacity: 0.7;
+}
+
+.socialIcon img {
+  width: 20px;
+  height: 20px;
+}
+
+.reservationBtn {
+  background-color: #23a6f0;
+  border: 2px solid #23a6f0;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.reservationBtn:hover {
+  background-color: #1a7fc9;
+  border-color: #1a7fc9;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .logoImage {
+    height: 40px;
+  }
+}
