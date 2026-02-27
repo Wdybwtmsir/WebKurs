@@ -33,12 +33,12 @@ const Section2 = () => {
         <div className={styles.servicesGrid}>
           {services.map(service => (
             <div key={service.id} className={styles.serviceCard}>
-              <div className={styles.iconWrapper}>
-                <img src={service.icon} alt={service.title} className={styles.serviceIcon} />
+              <div className={styles.imageWrapper}>
+                <img src={service.icon} alt={service.title} className={styles.serviceImage} />
               </div>
               <h3 className={styles.serviceTitle}>{service.title}</h3>
               <p className={styles.serviceDescription}>{service.description}</p>
-              <a href="#" className={styles.readMore}>READ MORE →</a>
+              <button className={styles.readMoreBtn}>READ MORE →</button>
             </div>
           ))}
         </div>

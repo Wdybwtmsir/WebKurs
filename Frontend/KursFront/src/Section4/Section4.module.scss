@@ -1,0 +1,178 @@
+.section {
+  padding: 80px 0;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mainTitle {
+  text-align: center;
+  color: #23a6f0;
+  font-size: 18px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.subtitle {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  color: #000;
+  margin-bottom: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.block {
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: box-shadow 0.3s;
+  aspect-ratio: 1 / 1; /* квадратные блоки */
+}
+
+.block:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.imageWrapper {
+  flex: 0 0 50%;       /* фото занимает ровно половину блока */
+  max-width: 50%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blockTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.servicesList {
+  flex: 1;
+  margin-bottom: 15px;
+}
+
+.serviceItem {
+  margin-bottom: 20px;        /* отступ между пунктами, как в Figma */
+}
+
+.serviceItem:last-child {
+  margin-bottom: 0;
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-bottom: 5px;
+  white-space: nowrap;        /* предотвращаем перенос строки с точками */
+}
+
+.serviceName {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.serviceDots {
+  font-size: 18px;
+  color: #333;
+  letter-spacing: 2px;        /* небольшие промежутки между точками */
+  margin: 0 5px;
+}
+
+.servicePrice {
+  font-size: 18px;
+  font-weight: 700;
+  color: #23a6f0;
+}
+
+.serviceDescription {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  font-weight: 300;
+  margin: 0;
+  white-space: normal;
+}
+
+.appointmentBtn {
+  background: transparent;
+  border: 2px solid #23a6f0;  /* бирюзовая рамка */
+  color: #000;                 /* чёрный текст */
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+
+.appointmentBtn:hover {
+  background-color: #23a6f0;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .subtitle {
+    font-size: 36px;
+  }
+  
+  .block {
+    aspect-ratio: auto;
+    flex-direction: column;
+  }
+  
+  .imageWrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .serviceHeader {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+}
