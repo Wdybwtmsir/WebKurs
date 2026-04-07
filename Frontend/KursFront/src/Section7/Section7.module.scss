@@ -1,0 +1,219 @@
+.discountSection {
+  padding: 100px 0;
+  background-color: #f4f7f8;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Левая часть */
+.content {
+  .tag {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #5a7a7f;
+    margin-bottom: 12px;
+  }
+
+  .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+  }
+
+  .desc {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    margin: 0 0 35px 0;
+  }
+}
+
+/* Блок контактов + скидка */
+.contactBox {
+  display: flex;
+  background: #fff;
+  border: 1px solid #e0e6e8;
+  overflow: hidden;
+  max-width: 450px;
+}
+
+.contactInfo {
+  flex: 1;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contactRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  
+  svg { color: #5a7a7f; margin-top: 3px; }
+  
+  .label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+  
+  .value {
+    font-size: 14px;
+    color: #555;
+  }
+}
+
+.discountBadge {
+  background: #1f2a35;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  min-width: 130px;
+  
+  span:first-child {
+    font-size: 11px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+  }
+  
+  strong {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 4px 0;
+  }
+  
+  span:last-child {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
+
+/* Форма */
+.formCard {
+  background: #fff;
+  padding: 40px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  border-radius: 4px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #d0d8db;
+  padding: 0 15px;
+  height: 52px;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  background: #fff;
+
+  &:focus-within {
+    border-color: #5a7a7f;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+    color: #888;
+    flex-shrink: 0;
+  }
+
+  input, textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #333;
+    background: transparent;
+    &::placeholder { color: #999; }
+  }
+
+  textarea {
+    height: 100px;
+    resize: none;
+    padding-top: 16px;
+  }
+}
+
+.submitBtn {
+  height: 55px;
+  background: #5a7a7f;
+  color: #fff;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 4px;
+
+  &:hover { background: #4a656a; }
+  &:active { transform: scale(0.98); }
+}
+
+/* 📱 Адаптив */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .title { font-size: 38px; }
+  .contactBox { max-width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .discountSection { padding: 60px 0; }
+  .title { font-size: 32px; }
+  
+  .contactBox {
+    flex-direction: column;
+  }
+  
+  .contactInfo {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .discountBadge {
+    padding: 20px;
+  }
+  
+  .formCard { padding: 30px 20px; }
+}

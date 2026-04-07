@@ -1,0 +1,147 @@
+.footer {
+  background-color: #1b262b; // Темный фон из макета
+  color: #fff;
+  padding-top: 70px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Верхняя часть */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  
+  .logoIcon {
+    color: #7ca5aa; // Цвет иконки
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.socialLink {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: 0.3s;
+  
+  &:hover {
+    background: #7ca5aa;
+    border-color: #7ca5aa;
+  }
+}
+
+/* Сетка колонок */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+.column h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column ul li {
+  margin-bottom: 12px;
+}
+
+.column ul li a,
+.column ul li {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+
+  &:hover {
+    color: #7ca5aa;
+    padding-left: 5px; // Эффект сдвига при наведении
+  }
+}
+
+/* Контакты */
+.contactBlock p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  
+  strong {
+    color: #fff;
+    font-weight: 600;
+  }
+}
+
+/* Нижняя полоса */
+.bottomBar {
+  text-align: center;
+  padding: 25px 0;
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  
+  p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+  }
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); // 2 колонки на планшете
+  }
+}
+
+@media (max-width: 768px) {
+  .footer { padding-top: 50px; }
+  
+  .topBar {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr; // 1 колонка на мобильном
+    gap: 40px;
+    text-align: center; // Центрируем текст на телефоне
+  }
+  
+  .contactBlock p {
+    text-align: left; // Контакты лучше оставить слева
+  }
+}
