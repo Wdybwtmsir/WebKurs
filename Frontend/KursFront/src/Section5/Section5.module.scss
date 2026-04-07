@@ -1,0 +1,143 @@
+.testimonials {
+  background-color: #f4f7f8; 
+  padding: 100px 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.tag {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 60px;
+  line-height: 1.2;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.cardBody {
+  padding: 40px 35px 30px;
+  flex: 1;
+}
+
+.cardText {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #555;
+  margin: 0;
+  text-align: left;
+}
+
+.cardFooter {
+  background-color: #1f2a35; 
+  padding: 25px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  flex-shrink: 0;
+}
+
+.authorInfo {
+  flex: 1;
+  text-align: left;
+}
+
+.stars {
+  color: #f4c542;
+  font-size: 15px;
+  margin-bottom: 6px;
+  letter-spacing: 2px;
+}
+
+.name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 4px 0;
+}
+
+.location {
+  font-size: 13px;
+  color: #9aa5b1;
+  display: block;
+}
+
+.quoteIcon {
+  font-family: serif;
+  font-size: 56px;
+  line-height: 1;
+  color: rgba(255,255,255,0.25);
+  margin-left: auto; 
+  user-select: none;
+}
+
+/* 📱 Адаптив */
+@media (max-width: 992px) {
+  .title { font-size: 38px; }
+  .cardsGrid { gap: 20px; }
+  .cardBody { padding: 30px 25px 20px; }
+  .cardFooter { padding: 20px 25px; }
+}
+
+@media (max-width: 768px) {
+  .testimonials { padding: 60px 0; }
+  .title { font-size: 32px; margin-bottom: 40px; }
+  
+  .cardsGrid {
+    grid-template-columns: 1fr; 
+  }
+  
+  .cardFooter {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .authorInfo { text-align: center; }
+  .quoteIcon { display: none; } 
+}
+
+@media (max-width: 480px) {
+  .avatar { width: 55px; height: 55px; }
+  .name { font-size: 18px; }
+  .cardText { font-size: 14px; }
+}

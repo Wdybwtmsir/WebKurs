@@ -90,6 +90,13 @@
   transform: translate(-50%, -50%);
 }
 
+.imageWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
 .heroImage {
   position: absolute;
   width: auto;
